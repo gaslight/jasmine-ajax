@@ -1,3 +1,4 @@
-source :rubygems
+source "http://rubygems.org"
 
-gem 'jasmine', "~> 1.1.0"
+# Specify your gem's dependencies in ..gemspec
+gemspec
