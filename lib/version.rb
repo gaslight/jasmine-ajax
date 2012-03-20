@@ -1,3 +1,5 @@
-module .
-  VERSION = "0.0.1"
+module Jasmine
+  module Ajax
+    VERSION = "0.0.2"
+  end
 end

@@ -48,7 +48,7 @@ function clearAjaxRequests() {
 
 // Fake XHR for mocking Ajax Requests & Responses
 function FakeXMLHttpRequest() {
-  var extend = Object.extend || $.extend;
+  var extend = Object.extend || jQuery.extend;
   extend(this, {
     requestHeaders: {},
 
@@ -151,7 +151,7 @@ jasmine.Ajax = {
   installJquery: function() {
     jasmine.Ajax.mode = 'jQuery';
     jasmine.Ajax.real = jQuery.ajaxSettings.xhr;
-    jQuery.ajaxSettings.xhr = jasmine.Ajax.jQueryMock;
+    jQuery.ajaxSetup({xhr: jasmine.Ajax.jQueryMock});
 
   },
 
